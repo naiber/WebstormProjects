@@ -1,0 +1,23 @@
+.getD table{
+    width: 70%;
+    margin:0 0 2% 20px;
+}
+.getD button{
+    display: block;
+    margin:0 0 2% 20px;
+}
+.getD form{
+    margin-top: 100px;
+}
+.container-fluid .chooseApi{
+    margin-bottom: 2%;
+}
+
+.putD{
+    padding:0 0 2% 20px;
+    width: 70%;
+}
+
+.putD select {
+    margin-bottom: 2%;
+}

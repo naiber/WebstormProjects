@@ -1,0 +1,24 @@
+{
+  "name": "lesson4",
+  "version": "1.0.0",
+  "description": "Express API core",
+  "main": "./bin/www",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "api"
+  ],
+  "author": "Daniele Manni",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
+}

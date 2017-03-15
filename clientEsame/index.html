@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="public/app.js"></script>
+</head>
+
+<body ng-app="client">
+
+<div class="container-fluid" ng-controller="clientH">
+    <ul class="nav nav-tabs chooseApi">
+        <li ng-click="tab=0" role="presentation"><a href="#">Get_Put</a></li>
+        <li ng-click="tab=1" role="presentation"><a href="#">Post</a></li>
+        <li ng-click="tab=3" role="presentation"><a href="#">Delete</a></li>
+    </ul>
+    <!--//////////////////////POST\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <form ng-show="tab==1" class="col-md-8">
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="Name" ng-model="data.name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">nPetal</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="nPetal" ng-model="data.nPetal">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Colour</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="Colour" ng-model="data.colour">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" ng-click="insertFlower()">POST</button>
+            </div>
+        </div>
+    </form>
+    <!--//////////////////////GET\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div ng-show="tab==0" class="row getD">
+
+        <button type="button" class="btn btn-default" ng-click="showFlower()">GET</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>nPetal</th>
+                    <th>Colour</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="flower in flowers">
+                <th scope="row">{{flower._id}}</th>
+                <td>{{flower.name}}</td>
+                <td>{{flower.nPetal}}</td>
+                <td>{{flower.colour}}</td>
+                <td><button class="btn btn-default" ng-click="getFlower(flower)">ID</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <!--//////////////////////PUT\\\\\\\\\\\\\\\\\\\\\\\\\-->
+        <form class="form-inline" >
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="data.name" ng-model="data.name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Surname</label>
+                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Surname" ng-model="data.nPetal">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Date</label>
+                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Date" ng-model="data.colour">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="modFlower()">Put</button>
+
+        </form>
+
+        <!--<h3 class="col-md-11" ng-repeat="user in users">{{user.name}}</h3>-->
+
+    </div>
+    <!--//////////////////////DELETE\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <div class="row deleteF" ng-show="tab==3">
+        <button type="button" class="btn btn-default" ng-click="showFlower()">GET_ID</button>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>nPetal</th>
+                <th>Colour</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="flower in flowers">
+                <th scope="row">{{$index}}</th>
+                <td>{{flower.name}}</td>
+                <td>{{flower._id}}</td>
+                <td><button class="btn btn-default" ng-click="eraseFlower(flower._id)">Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <!--<form class="form-inline" >
+            <div class="form-group">
+                <label for="exampleInputName2">ID</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="data._id" ng-model="data._id">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="eraseFlower(id)">Delete</button>
+        </form>-->
+    </div>
+    <!--<div ng-show="tab==2" class="row putD">
+        <button type="button" class="btn btn-default" ng-click="showFlower()">Show IDs</button>
+        <select  class="form-control" ng-model="id">
+            <option ng-repeat="flower in flowers" >{{flower._id}}</option>
+
+        </select>
+        <pre>{{id}}</pre>
+        <span>{{flower.name}}</span>
+        <form class="form-inline" >
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name" ng-model="data.name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Surname</label>
+                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Surname" ng-model="data.nPetal">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Date</label>
+                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Date" ng-model="data.colour">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="modFlower()">Put</button>
+            {{data}}
+        </form>
+    </div>-->
+
+</div>
+
+</body>
+</html>

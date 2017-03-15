@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="public/app.js"></script>
+</head>
+
+<body ng-app="client">
+
+<div class="container-fluid" ng-controller="clientH">
+    <ul class="nav nav-tabs chooseApi">
+        <li ng-click="tab=0" role="presentation"><a href="#">Get</a></li>
+        <li ng-click="tab=1" role="presentation"><a href="#">Post</a></li>
+        <li ng-click="tab=2" role="presentation"><a href="#">Put</a></li>
+        <li ng-click="tab=3" role="presentation"><a href="#">Delete</a></li>
+    </ul>
+    <form ng-show="tab==1" class="col-md-8">
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="Name" ng-model="data.name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Surname</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="Surname" ng-model="data.surname">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Date</label>
+            <div class="col-sm-10">
+                <input type="datetime" class="form-control" id="inputEmail3" placeholder="Date" ng-model="data.birthDate">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" ng-click="insertUser()">POST</button>
+            </div>
+        </div>
+    </form>
+    <div ng-show="tab==0" class="row getD">
+
+        <button type="button" class="btn btn-default" ng-click="showUsers()">GET</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Birth Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in users">
+                <th scope="row">{{user.index}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.surname}}</td>
+                <td>{{user.birthDate}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--<h3 class="col-md-11" ng-repeat="user in users">{{user.name}}</h3>-->
+
+    </div>
+    <div ng-show="tab==2" class="row putD">
+        <button type="button" class="btn btn-default" ng-click="showUsers()">Show IDs</button>
+        <select  class="form-control" ng-model="data._id">
+            <option ng-repeat="user in users" >{{user._id}}</option>
+        </select>
+        <form class="form-inline" >
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name" ng-model="data.name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Surname</label>
+                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Surname" ng-model="data.surname">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Date</label>
+                <input type="datetime" class="form-control" id="exampleInputEmail2" placeholder="Date" ng-model="data.birthDate">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="modUser()">Put</button>
+            {{data}}
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

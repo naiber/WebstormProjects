@@ -1,0 +1,38 @@
+@media screen {
+
+}
+@font-face {
+    font-family: 'myFont';
+    src: url('../fonts/RussoOne-Regular.eot');
+    src: url('../fonts/RussoOne-Regular.woff2') format('woff2'),
+    url('../fonts/RussoOne-Regular.woff') format('woff'),
+    url('../fonts/RussoOne-Regular.ttf') format('truetype'),
+    url('../fonts/RussoOne-Regular.svg#RussoOne-Regular') format('svg'),
+    url('../fonts/RussoOne-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body{
+    box-sizing: border-box;
+    display: block;
+    clear: both;
+    width:100%;
+    font-family: "myFont","Arial","sans-serif";
+}
+
+#myNav{
+    width:100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 100px;
+    z-index: 20;
+    background-color: white;
+    border:none;
+}
+
+#myNav a:hover{
+    color:#1f1f1f
+}

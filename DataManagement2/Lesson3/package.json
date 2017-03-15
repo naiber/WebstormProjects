@@ -1,0 +1,19 @@
+{
+  "name": "lesson3",
+  "version": "1.0.0",
+  "description": "Create and populate mongodb database",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "Daniele Manni",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^4.6.4"
+  }
+}

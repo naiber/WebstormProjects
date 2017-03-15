@@ -1,0 +1,10 @@
+.header-img p{
+    margin-left: 20px;
+}
+
+.carosello img{
+    /*width: 50%;*/
+    margin-left:auto;
+    margin-right:auto;
+    height:80%;
+}

@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('../fonts/RussoOne-Regular.eot');
+    src: url('../fonts/RussoOne-Regular.woff2') format('woff2'),
+    url('../fonts/RussoOne-Regular.woff') format('woff'),
+    url('../fonts/RussoOne-Regular.ttf') format('truetype'),
+    url('../fonts/RussoOne-Regular.svg#RussoOne-Regular') format('svg'),
+    url('../fonts/RussoOne-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body{
+    width:100%;
+    font-family: "myFont","Arial","sans-serif";
+}
+.navbar-wrapper .container .myNav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    background-color: transparent;
+    border:none;
+}
+
+.navbar-wrapper .container .myNav i{
+    font-size:20px
+}
+
+.navbar-wrapper .container .myNav .navbar-header{
+    padding-left: 50px;
+}
+
+.myCar h1{
+    font-size:8em;
+    width: 100%;
+}
+
+.middleContent{
+    margin-top: 2%;
+}
+.middleContent div{
+    border: none;
+}
+.middleContent h3{
+    text-align: justify;
+    word-break: break-all;
+}
+.middleContent .thumbnail{
+    font-size:2em;
+    text-align: center;!important;
+    color: #4da3dc;
+}
+
+.middleContent2 p{
+    font-size: 1.3em;
+    width: 70%;
+    margin:5% 20px 5% 100px;
+}
+
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f6f8f9 -moz-use-text-color #f6f8f9;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0;
+}
+.middleContent3{
+    /*background-color: #f6f8f9;*/
+    margin-top: 50px;
+}
+.middleContent3 img{
+    margin:0 auto 0 50px;
+}
+.middleContent3 p{
+    font-size: 1.3em;
+    width: 70%;
+    margin:5% 20px 5% 100px;
+}
+.pannel3 .panel{
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pannel3 h3{
+    text-align: center;
+}
+.pannel3 .headerPan p{
+    color: #C3C5C6;
+    text-align: center;
+    font-style: italic;
+}
+
+.pannel3 .pan1{
+    position: relative;
+    width: 70%;
+    left:200px;
+}
+
+.pannel3 .pan1 .panel-heading{
+    background-color: #0f0f0f;
+}
+.pannel3 .pan1 h1{
+    color: white;
+    text-align: center;
+}
+.pannel3 .pan1 p{
+    color: white;
+    text-align: center;
+}
+
+.pannel3 .pan1 .panel-body p{
+    color: #000;
+}
+.pannel3 .pan2{
+    width: 150%;
+    margin: 0 20px 0 20px;
+}
+.pannel3 .pan2 .panel-heading{
+    background-color: #4da3dc;
+}
+.pannel3 .pan2 h1{
+    color: white;
+    text-align: center;
+}
+.pannel3 .pan2 p{
+    color: white;
+    text-align: center;
+}
+
+.pannel3 .pan2 .panel-body p{
+    color: #000;
+}
+.pannel3 .pan3{
+    position: relative;
+    width: 70%;
+    right: 80px;
+}
+.pannel3 .pan3 .panel-heading{
+    background-color: #0f0f0f;
+}
+.pannel3 .pan3 h1{
+    color: white;
+    text-align: center;
+}
+.pannel3 .pan3 p{
+    color: white;
+    text-align: center;
+}
+
+.pannel3 .pan3 .panel-body p{
+    color: #000;
+}
+.middleContent4{
+    padding-top: 20px;
+    color: #f6f8f9;;
+    background-color: #1c4c6d;
+}
+.innerContent4 p{
+    margin: 2% 2% 2% 2%;
+    color: #909092;
+}
+.innerContent4 .feedback-box{
+    background-color: white;
+    border-radius: 3px;
+
+}

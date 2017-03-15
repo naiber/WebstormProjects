@@ -1,0 +1,52 @@
+.tabNav ul{
+    list-style: none;
+    display: inline-block;
+    margin:0 auto;
+    padding:10px 15px 10px 15px;
+}
+
+.row .dynamicUsers img {
+    width: 50%;
+    margin:auto 1% 1% auto;
+}
+
+.diamondStore{
+    clear: both;
+}
+
+.tabNav ul li{
+    float:left;
+    display:inline;
+    margin:0 10px 0 10px;
+}
+
+.tab1{
+    background-color: red;
+}
+.tab2{
+    background-color: yellow;
+}
+.tab3{
+    background-color: blue;
+}
+.dynamicClass{
+    width: 50%;
+    float:left;
+    margin: 2% 0 0 2%;
+
+}
+.sky {
+    margin-top: 2%;
+    color:white;
+    background-color:lightblue;}
+.tomato {
+    margin-top: 2%;
+    background-color:coral;
+    font-family:Verdana;
+}
+
+
+.dynamicUsers{
+    margin-bottom: 100px;
+    width:100%;
+}
